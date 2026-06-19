@@ -9,3 +9,8 @@ generator client {
 datasource db {
   provider = "sqlite"
 }
+
+model Subscriber {
+  id    String @id @default(uuid())
+  email String @unique
+}
